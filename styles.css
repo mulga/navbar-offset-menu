@@ -1,0 +1,214 @@
+/* Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+
+/* Work Sans */
+/* @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700&display=swap"); */
+
+/* Roboto */
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap'); */
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0%;
+}
+
+/* set up the body */
+body {
+  font-family: "Open Sans", sans-serif;
+  /* font-family: 'Work Sans', sans-serif; */
+  /* font-family: 'Roboto', sans-serif; */
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* --------------------- */
+/* Utility classes                 */
+/* --------------------- */
+
+:root {
+  --color-primary: #007bff;
+  --color-secondary: #6c757d;
+  --color-success: #28a744;
+  --color-danger: #dc3644;
+  --color-warning: #ffc109;
+  --color-info: #18a2b8;
+  --color-light: #f8f9fa;
+  --color-dark: #343a40;
+  --color-white: #ffff;
+}
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-inline: 2em;
+  margin-inline: auto;
+  max-width: 80rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* --- custom css--- */
+
+header {
+  background-color: var(--color-light);
+  color: var(--color-white);
+  padding: 0.5rem 2rem;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  width: 50px;
+}
+
+.mobil {
+  cursor: pointer;
+}
+
+.mobil img {
+  width: 40px;
+}
+
+.sidebar-menu-offset {
+  background-color: var(--color-light);
+
+  width: 350px;
+  height: 100%;
+  padding: 1rem;
+  position: relative;
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateX(-100%);
+  transition: 400ms all ease-in-out;
+}
+
+.sidebar-menu-offset.active {
+  transform: translateY(0);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+  transition: 400ms all ease-in-out;
+}
+
+.menu-list-sidebar li {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.menu-item-sidebar {
+  display: block;
+  width: 100%;
+}
+
+/* close icon */
+
+.close-icon {
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-secondary);
+  border-radius: 50%;
+  color: var(--color-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 80%;
+  top: 10px;
+  opacity: 0.5;
+  cursor: pointer;
+}
